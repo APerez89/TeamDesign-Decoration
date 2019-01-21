@@ -13,7 +13,7 @@
           <li class="circle"> <a href="#"></a> </li>
         </ul>
       </div> <!-- Nav-2 End -->
-      <div class="arrow"><i class="fas fa-chevron-circle-down"></i></div>
+      <div class="arrow"><i id="arrow" class="fas fa-chevron-circle-down"></i></div>
     </div> <!-- HM Content End -->
   </div> <!-- Home Contain End -->
 </template>
@@ -37,10 +37,11 @@ export default {
   .hm-content {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 50px repeat(3, 1fr);
     grid-template-areas:
-      "bl-left  headline  nav-1"
-      "bl-left  headline  nav-2"
+      ".        .         nav-1"
+      "headline headline  headline"
+      ".        .         nav-2"
       "footer   footer    footer";
     margin: 30px;
     h1 {
@@ -85,6 +86,18 @@ export default {
         }
       }
     }
+    @mixin keyframes($name) {
+      @keyframes #{$name} {
+        @content;
+      }
+    }
+    @mixin animation($value) {
+      animation: $value;
+    }
+    @include keyframes(move) {
+      0% { bottom: 0; }
+      100% { bottom: 5px; }
+    }
     .arrow {
       display: grid;
       justify-content: center;
@@ -92,6 +105,10 @@ export default {
       grid-area: footer;
       font-size: 50px;
       color: rgba(255, 255, 255, 0.5);
+      #arrow {
+        position: relative;
+        @include animation(move 0.6s ease-in-out infinite alternate);
+      }
     }
   }
 }
