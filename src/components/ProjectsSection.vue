@@ -3,9 +3,12 @@
     <div class="proj-content">
       <h2>Our Projects</h2>
 
-      <div v-for="(project, idx) in data.default" :key="idx">
-        <div class="item h${randomNumber(4)} v${randomNumber(4)}" @click="projectClick()">
-          <img :src="`img/proj-img/plc-hld-img/${chooseImage()}.jpg`">
+      <div v-for="(project, idx) in data" :key="idx">
+        <div
+          @click="projectClick(project.id)"
+          :class="['item', `h${randomNumber(4)} v${randomNumber(4)}`]"
+        >
+          <img :src="`img/proj-img/plc-hld-img/${project.cover}`">
           <div class="item__overlay">
             <button>View →</button>
           </div>
@@ -20,42 +23,37 @@
 </template>
 
 <script>
-import * as data from "../data.json";
+import * as data from '../data.json';
 
 export default {
-  name: "projects",
+  name: 'projects',
   data() {
     return {
-      data,
-      picked: []
+      data: data.default,
+      picked: [],
     };
   },
   methods: {
     randomNumber(limit) {
       return Math.floor(Math.random() * limit) + 1;
     },
-    chooseImage() {
-      const a = this.randomNumber(4);
-      // if (this.picked.includes(a)) {
-      //   a = this.randomNumber(4);
-      // }
-
-      this.picked.push(a);
-      console.log("herro");
-    },
     projectClick(route) {
-      // $route.push(route);
-    }
-  }
+      this.$router.push(route);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+img {
+  cursor: pointer;
+}
+
 .projects-contain {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-areas: ".  content   .";
+  grid-template-areas: '.  content   .';
   .proj-content {
     grid-area: content;
   }
