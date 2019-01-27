@@ -1,11 +1,34 @@
 [
   {
     "id": 1,
-    "titles": {
-      "name": "Arizona Retreat"
-    },
-    "image": {
-      "src": "img/proj-img/plc-hld-img/az-ret.jpg"
-    }
+    "title": "Arizona Retreat",
+    "images": [
+      "proj-img/plc-hld-img/az-ret.jpg",
+      "proj-img/plc-hld-img/az-ret.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Chelsea Loft",
+    "images": [
+      "proj-img/plc-hld-img/az-ret.jpg",
+      "proj-img/plc-hld-img/az-ret.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Coastal Connecticut",
+    "images": [
+      "proj-img/plc-hld-img/az-ret.jpg",
+      "proj-img/plc-hld-img/az-ret.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Greenwich Village Pied a Terre",
+    "images": [
+      "proj-img/plc-hld-img/az-ret.jpg",
+      "proj-img/plc-hld-img/az-ret.jpg"
+    ]
   }
 ]
