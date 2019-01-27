@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
-    <AboutSection />
-    <ProjectsSection />
+    <router-view/>
+    <AboutSection/>
+    <ProjectsSection/>
   </div>
 </template>
 
