@@ -15,6 +15,12 @@
       </div> <!-- Nav-2 End -->
       <div class="arrow"><i id="arrow" class="fas fa-chevron-circle-down"></i></div>
     </div> <!-- HM Content End -->
+    <div class="contact">
+      <div class="contact-info">
+        <p>EMAIL: RICK@TEAMDESIGNANDDECORATION.COM</p>
+        <P>PHONE: (917)292-7700</P>
+      </div>
+    </div>
   </div> <!-- Home Contain End -->
 </template>
 

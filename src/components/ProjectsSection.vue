@@ -56,6 +56,12 @@ img {
   grid-template-areas: '.  content   .';
   .proj-content {
     grid-area: content;
+    .item {
+      img {
+        width: 500px;
+        height: 500px;
+      }
+    }
   }
 }
 </style>
